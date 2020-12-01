@@ -10,7 +10,7 @@ class Employees extends Component {
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th onClick={this.handleClick} scope="col">First</th>
+      <th onClick={this.handleClick} scope="col">Name</th>
       <th scope="col">Last</th>
       <th scope="col">Handle</th>
     </tr>
