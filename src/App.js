@@ -1,10 +1,10 @@
 import React from "react"
-import logo from './logo.svg';
 import './App.css';
 
-import {BrowserRouter as Router, Route } from "react-router-dom";
+import {BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Wrapper from "./components/Wrapper"
 
 
 function App() {
@@ -12,6 +12,9 @@ function App() {
    <Router>
      <div>
        <Navbar />
+       <Wrapper>
+         <h1>Hi</h1>
+       </Wrapper>
        <Footer />
      </div>
    </Router>
