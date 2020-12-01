@@ -1,7 +1,7 @@
 import React from "react"
 import './App.css';
 
-import {BrowserRouter as Router } from "react-router-dom";
+import {BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper"
@@ -13,7 +13,7 @@ function App() {
      <div>
        <Navbar />
        <Wrapper>
-         <h1>Hi</h1>
+         <Route exact path="/" component={Employees} />
        </Wrapper>
        <Footer />
      </div>
