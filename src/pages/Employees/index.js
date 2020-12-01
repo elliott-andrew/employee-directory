@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 
 class Employees extends Component {
+  handleClick() {
+    console.log("Clicked")
+  }
     render() {
         return (
-            <table class="table">
+            <table id="myTable" class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
+      <th onClick={this.handleClick} scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Handle</th>
     </tr>
