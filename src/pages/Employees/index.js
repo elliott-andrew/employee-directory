@@ -1,7 +1,45 @@
 import React from "react";
 
+
+
 function Employees() {
-  return(
+  const employees =
+    [
+      {
+        id: 1,
+        firstName: "Hem",
+        lastName: "The Cat",
+        role: "Bodega Cat"
+      },
+      {
+        id: 2,
+        firstName: "Kyle",
+        lastName: "The Cat",
+        role: "Bodega Cat"
+      },
+      {
+        id: 3,
+        firstName: "Colonel",
+        lastName: "The Dog",
+        role: "Loud Borker"
+      },
+      {
+        id: 4,
+        firstName: "Cheif",
+        lastName: "The Dog",
+        role: "Food Scavenger"
+      }
+    ];
+
+  let sortedEmployees = [...employees];
+
+  sortedEmployees.sort((eOne, eTwo) => {
+    if (eOne.firstName < eTwo.firstName) {
+      return -1;
+    }
+  });
+
+  return (
     <table id="myTable" class="table">
       <thead>
         <tr>
