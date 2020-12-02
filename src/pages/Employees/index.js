@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 
@@ -42,14 +42,16 @@ function Employees() {
     } else return 0
   });
 
+  const [sortedRow, setSortedRow] = useState();
+
   return (
     <table id="myTable" class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">Role</th>
+          <th scope="col"><button onClick={() => setSortedRow('id')}>#</button></th>
+          <th scope="col"><button onClick={() => setSortedRow('firstName')}>First Name</button></th>
+          <th scope="col" onClick={() => setSortedRow('lastName')}><button>Last Name</button></th>
+          <th scope="col" onClick={() => setSortedRow('role')}><button>Role</button></th>
         </tr>
       </thead>
       <tbody>
