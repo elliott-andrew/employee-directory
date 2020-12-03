@@ -27,6 +27,18 @@ function Employees() {
         firstName: "Cheif",
         lastName: "Dog",
         role: "Food Scavenger"
+      },
+      {
+        id: 5,
+        firstName: "Allen",
+        lastName: "Otto",
+        role: "Store Manager"
+      },
+      {
+        id: 6,
+        firstName: "Andrew",
+        lastName: "Elliott",
+        role: "Candy Buyer"
       }
     ];
   // Create an array to hold the employees array, which we can then use to adjust the order
@@ -43,31 +55,39 @@ function Employees() {
       } else return 0
     });
   };
+  // Create a new list and spread it into the set to map over each role in the employees array and pull out the unique values
+  // https://stackoverflow.com/questions/15125920/how-to-get-distinct-values-from-an-array-of-objects-in-javascript
+  let uniqueRoles = [...new Set(employees.map(employee => employee.role))];
 
   return (
-    <table id="myTable" className="table">
-      <thead>
-        <tr>
-          {/* onClick, pass the name of the row selected to sortedEmployees.sort() */}
-          <th scope="col"><button onClick={() => setSortedRow('id')}>#</button></th>
-          <th scope="col"><button onClick={() => setSortedRow('firstName')}>First Name</button></th>
-          <th scope="col" onClick={() => setSortedRow('lastName')}><button>Last Name</button></th>
-          <th scope="col" onClick={() => setSortedRow('role')}><button>Role</button></th>
-        </tr>
-      </thead>
-      <tbody>
-        {sortedEmployees.map((employee => (
-          // Map through our employees array and create a tr/td for each employees in the array.
-          // Establish unique key, display id number, first name, last name and role.
-          <tr key={employee.id}>
-            <td key={employee.id}>{employee.id}</td>
-            <td key={employee.firstName}>{employee.firstName}</td>
-            <td key={employee.lastName}>{employee.lastName}</td>
-            <td key={employee.role}>{employee.role}</td>
+    <>
+      {uniqueRoles.map((role => (
+        <button>{role}</button>
+      )))}
+      <table id="myTable" className="table">
+        <thead>
+          <tr>
+            {/* onClick, pass the name of the row selected to sortedEmployees.sort() */}
+            <th scope="col"><button onClick={() => setSortedRow('id')}>#</button></th>
+            <th scope="col"><button onClick={() => setSortedRow('firstName')}>First Name</button></th>
+            <th scope="col" onClick={() => setSortedRow('lastName')}><button>Last Name</button></th>
+            <th scope="col" onClick={() => setSortedRow('role')}><button>Role</button></th>
           </tr>
-        )))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {sortedEmployees.map((employee => (
+            // Map through our employees array and create a tr/td for each employees in the array.
+            // Establish unique key, display id number, first name, last name and role.
+            <tr key={employee.id}>
+              <td key={employee.id}>{employee.id}</td>
+              <td key={employee.firstName}>{employee.firstName}</td>
+              <td key={employee.lastName}>{employee.lastName}</td>
+              <td key={employee.role}>{employee.role}</td>
+            </tr>
+          )))}
+        </tbody>
+      </table>
+    </>
   )
 };
 
