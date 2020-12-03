@@ -6,6 +6,9 @@
   ## Description
   An employee directory created using React which allows an employer to view their entire employee directory and sort by first name, last name, role or employee id number.
 
+  ## Working Site
+  [https://still-reef-41025.herokuapp.com](https://still-reef-41025.herokuapp.com)
+
   ## Table of Contents
   - [Installation](#Installation)
   - [License](#License)
