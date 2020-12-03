@@ -4,11 +4,10 @@
 
   # Employee Directory
   ## Description
-  An employee directory created using React which allows an employer to view their entire employee directory.
+  An employee directory created using React which allows an employer to view their entire employee directory and sort by first name, last name, role or employee id number.
 
   ## Table of Contents
   - [Installation](#Installation)
-  - [Contributing](#Contributing)
   - [License](#License)
   - [Questions](#Questions)
   
