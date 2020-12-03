@@ -57,13 +57,13 @@ function Employees() {
   };
   // Create a new list and spread it into the set to map over each role in the employees array and pull out the unique values
   // https://stackoverflow.com/questions/15125920/how-to-get-distinct-values-from-an-array-of-objects-in-javascript
-  let uniqueRoles = [...new Set(employees.map(employee => employee.role))];
+  // let uniqueRoles = [...new Set(employees.map(employee => employee.role))];
 
   return (
     <>
-      {uniqueRoles.map((role => (
+      {/* {uniqueRoles.map((role => (
         <button>{role}</button>
-      )))}
+      )))} */}
       <table id="myTable" className="table">
         <thead>
           <tr>
